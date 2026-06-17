@@ -6,8 +6,9 @@ class Tapecap < Formula
   sha256 "a74d83705aa988cce90b5d3e45263b6ef1d774b787b6701d940a25acbd53508d"
   license "MIT"
 
-  # Ships as a prebuilt universal (x86_64 + arm64) binary; macOS-only by nature (FireWire).
-  depends_on :macos
+  # Ships as a prebuilt universal (x86_64 + arm64) binary. macOS 26 Tahoe removed
+  # the FireWire stack, so cap the OS at Sequoia.
+  depends_on maximum_macos: :sequoia
 
   def install
     bin.install "tapecap"
