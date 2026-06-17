@@ -1,0 +1,27 @@
+# Managed projects — the single source of truth for the bump automation.
+# Add an entry here (and write its initial .rb once) to manage a new project;
+# scripts/bump.sh and the workflow need no changes.
+#
+# Fields:
+#   name   - formula/cask token (and the value to pass to bump.sh)
+#   repo   - upstream GitHub repo to read releases from
+#   file   - the .rb to rewrite, relative to the repo root
+#   type   - formula (single asset) | cask (per-arch assets)
+#   assets - asset name -> suffix matched against the release asset names:
+#              formula: a single "default"
+#              cask:    "arm" and "intel"
+
+- name: tapecap
+  repo: xingrz/tapecap
+  file: Formula/tapecap.rb
+  type: formula
+  assets:
+    default: tapecap-macos-universal.tar.gz
+
+- name: tapeflow
+  repo: xingrz/tapeflow
+  file: Casks/tapeflow.rb
+  type: cask
+  assets:
+    arm: -arm64.dmg
+    intel: -x64.dmg
