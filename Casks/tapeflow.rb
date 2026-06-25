@@ -1,9 +1,9 @@
 cask "tapeflow" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.8.0"
-  sha256 arm:   "97634b782b7c8c89f510fee23f08b94f7bf3afff6172e28749b9ef5b98740bb5",
-         intel: "fea2e5de598785ebc9d3b25a76562fea1b9fc0477c288e620975cef968e0866c"
+  version "1.8.1"
+  sha256 arm:   "e146bae88f2213ba54531e12ad47cb8eab7f30786853359f37d6e0099d73c632",
+         intel: "736c556826b7a69b0f49f0fe7da42f2a5a55f64d288c1f0ca7ffc55f27f1ac68"
 
   url "https://github.com/xingrz/tapeflow/releases/download/v#{version}/TapeFlow-#{version}-#{arch}.dmg",
       verified: "github.com/xingrz/tapeflow/"
