@@ -1,9 +1,9 @@
 class Tapecap < Formula
   desc "Raw DV / HDV tape capture over FireWire for macOS"
   homepage "https://github.com/xingrz/tapecap"
-  url "https://github.com/xingrz/tapecap/releases/download/v0.3.1/tapecap-macos-universal.tar.gz"
-  version "0.3.1"
-  sha256 "00224282d72759da5c041fe3b8377f25ee27923597a2ab304578d103e78bd8cd"
+  url "https://github.com/xingrz/tapecap/releases/download/v0.4.0/tapecap-macos-universal.tar.gz"
+  version "0.4.0"
+  sha256 "2b598b10d8c5fd0e7386149e32d6e27633e85cd86bef11e48eea5f92f9815a1f"
   license "MIT"
 
   # Ships as a prebuilt universal (x86_64 + arm64) binary. macOS 26 Tahoe removed
